@@ -3,7 +3,8 @@
     <TheHeader />
     <main>
       <!-- <MainPage /> -->
-      <ProductDetailPage />
+      <!-- <ProductDetailPage /> -->
+      <CartPage />
     </main>
     <TheFooter />
   </div>
@@ -14,4 +15,5 @@ import TheHeader from "./layout/TheHeader.vue";
 import TheFooter from "./layout/TheFooter.vue";
 import MainPage from "./views/MainPage.vue";
 import ProductDetailPage from "./views/ProductDetailPage.vue";
+import CartPage from "./views/CartPage.vue";
 </script>
