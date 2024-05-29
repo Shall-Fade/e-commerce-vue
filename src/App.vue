@@ -4,7 +4,8 @@
     <main>
       <!-- <MainPage /> -->
       <!-- <ProductDetailPage /> -->
-      <CartPage />
+      <!-- <CartPage /> -->
+      <OrderCompletedPage />
     </main>
     <TheFooter />
   </div>
@@ -16,4 +17,5 @@ import TheFooter from "./layout/TheFooter.vue";
 import MainPage from "./views/MainPage.vue";
 import ProductDetailPage from "./views/ProductDetailPage.vue";
 import CartPage from "./views/CartPage.vue";
+import OrderCompletedPage from "./views/OrderCompletedPage.vue";
 </script>
