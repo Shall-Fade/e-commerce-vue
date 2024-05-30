@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <base-heading>Shopping Cart</base-heading>
     <div class="flex gap-x-[80px] max-w-[1170px] w-full mx-auto mt-[140px] mb-[145px]">
       <CartList />

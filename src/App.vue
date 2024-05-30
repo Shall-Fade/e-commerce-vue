@@ -5,7 +5,8 @@
       <!-- <MainPage /> -->
       <!-- <ProductDetailPage /> -->
       <!-- <CartPage /> -->
-      <OrderCompletedPage />
+      <!-- <OrderCompletedPage /> -->
+      <AuthPage />
     </main>
     <TheFooter />
   </div>
@@ -18,4 +19,5 @@ import MainPage from "./views/MainPage.vue";
 import ProductDetailPage from "./views/ProductDetailPage.vue";
 import CartPage from "./views/CartPage.vue";
 import OrderCompletedPage from "./views/OrderCompletedPage.vue";
+import AuthPage from "./views/AuthPage.vue";
 </script>
