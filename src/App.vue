@@ -7,7 +7,8 @@
       <!-- <CartPage /> -->
       <!-- <OrderCompletedPage /> -->
       <!-- <AuthPage /> -->
-      <BlogPage />  
+      <!-- <BlogPage /> -->
+      <ArticlePage />
     </main>
     <TheFooter />
   </div>
@@ -22,4 +23,5 @@ import CartPage from "./views/CartPage.vue";
 import OrderCompletedPage from "./views/OrderCompletedPage.vue";
 import AuthPage from "./views/AuthPage.vue";
 import BlogPage from "./views/BlogPage.vue";
+import ArticlePage from "./views/ArticlePage.vue";
 </script>

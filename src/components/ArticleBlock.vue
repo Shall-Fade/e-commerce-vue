@@ -1,0 +1,253 @@
+<template>
+  <div>
+    <img class="w-full h-[450px] mb-[25px] rounded-[6px] object-cover" src="/images/article-img.jpg" alt="Woman" />
+    <ul class="flex items-center gap-x-[25px] mb-[25px]">
+      <li class="flex items-center gap-x-[8px]">
+        <span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.36065 0.333008L11.6673 3.64634L10.714 4.58634L7.41398 1.28634L8.36065 0.333008ZM0.333984 11.1863L4.66732 6.87301C4.60065 6.66634 4.64732 6.40634 4.82065 6.23301C5.08065 5.97301 5.50732 5.97301 5.76732 6.23301C6.02732 6.49967 6.02732 6.91967 5.76732 7.17968C5.59398 7.35301 5.33398 7.39967 5.12732 7.33301L0.813984 11.6663L7.88732 9.29967L10.2407 5.05967L6.94732 1.75967L2.70065 4.11301L0.333984 11.1863Z"
+              fill="#FB2E86"
+            />
+          </svg>
+        </span>
+        <span
+          class="bg-[#FFE7F9] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue"
+          >Surf Auxion</span
+        >
+      </li>
+      <li class="flex items-center gap-x-[8px]">
+        <span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8.00065 12.6667C8.13251 12.6667 8.2614 12.6276 8.37103 12.5543C8.48066 12.4811 8.56611 12.377 8.61657 12.2551C8.66703 12.1333 8.68023 11.9993 8.65451 11.87C8.62878 11.7406 8.56529 11.6219 8.47206 11.5286C8.37882 11.4354 8.26003 11.3719 8.13071 11.3462C8.00139 11.3204 7.86735 11.3336 7.74553 11.3841C7.62371 11.4346 7.51959 11.52 7.44634 11.6296C7.37308 11.7393 7.33398 11.8682 7.33398 12C7.33398 12.1768 7.40422 12.3464 7.52925 12.4714C7.65427 12.5964 7.82384 12.6667 8.00065 12.6667ZM11.334 12.6667C11.4658 12.6667 11.5947 12.6276 11.7044 12.5543C11.814 12.4811 11.8994 12.377 11.9499 12.2551C12.0004 12.1333 12.0136 11.9993 11.9878 11.87C11.9621 11.7406 11.8986 11.6219 11.8054 11.5286C11.7122 11.4354 11.5934 11.3719 11.464 11.3462C11.3347 11.3204 11.2007 11.3336 11.0789 11.3841C10.957 11.4346 10.8529 11.52 10.7797 11.6296C10.7064 11.7393 10.6673 11.8682 10.6673 12C10.6673 12.1768 10.7376 12.3464 10.8626 12.4714C10.9876 12.5964 11.1572 12.6667 11.334 12.6667ZM11.334 10C11.4658 10 11.5947 9.96092 11.7044 9.88767C11.814 9.81441 11.8994 9.71029 11.9499 9.58848C12.0004 9.46666 12.0136 9.33261 11.9878 9.20329C11.9621 9.07397 11.8986 8.95518 11.8054 8.86195C11.7122 8.76871 11.5934 8.70522 11.464 8.6795C11.3347 8.65377 11.2007 8.66698 11.0789 8.71743C10.957 8.76789 10.8529 8.85334 10.7797 8.96297C10.7064 9.07261 10.6673 9.2015 10.6673 9.33335C10.6673 9.51016 10.7376 9.67973 10.8626 9.80476C10.9876 9.92978 11.1572 10 11.334 10ZM8.00065 10C8.13251 10 8.2614 9.96092 8.37103 9.88767C8.48066 9.81441 8.56611 9.71029 8.61657 9.58848C8.66703 9.46666 8.68023 9.33261 8.65451 9.20329C8.62878 9.07397 8.56529 8.95518 8.47206 8.86195C8.37882 8.76871 8.26003 8.70522 8.13071 8.6795C8.00139 8.65377 7.86735 8.66698 7.74553 8.71743C7.62371 8.76789 7.51959 8.85334 7.44634 8.96297C7.37308 9.07261 7.33398 9.2015 7.33398 9.33335C7.33398 9.51016 7.40422 9.67973 7.52925 9.80476C7.65427 9.92978 7.82384 10 8.00065 10ZM12.6673 2.00002H12.0007V1.33335C12.0007 1.15654 11.9304 0.986973 11.8054 0.861949C11.6804 0.736925 11.5108 0.666687 11.334 0.666687C11.1572 0.666687 10.9876 0.736925 10.8626 0.861949C10.7376 0.986973 10.6673 1.15654 10.6673 1.33335V2.00002H5.33398V1.33335C5.33398 1.15654 5.26375 0.986973 5.13872 0.861949C5.0137 0.736925 4.84413 0.666687 4.66732 0.666687C4.49051 0.666687 4.32094 0.736925 4.19591 0.861949C4.07089 0.986973 4.00065 1.15654 4.00065 1.33335V2.00002H3.33398C2.80355 2.00002 2.29484 2.21073 1.91977 2.58581C1.5447 2.96088 1.33398 3.46959 1.33398 4.00002V13.3334C1.33398 13.8638 1.5447 14.3725 1.91977 14.7476C2.29484 15.1226 2.80355 15.3334 3.33398 15.3334H12.6673C13.1978 15.3334 13.7065 15.1226 14.0815 14.7476C14.4566 14.3725 14.6673 13.8638 14.6673 13.3334V4.00002C14.6673 3.46959 14.4566 2.96088 14.0815 2.58581C13.7065 2.21073 13.1978 2.00002 12.6673 2.00002ZM13.334 13.3334C13.334 13.5102 13.2637 13.6797 13.1387 13.8048C13.0137 13.9298 12.8441 14 12.6673 14H3.33398C3.15717 14 2.9876 13.9298 2.86258 13.8048C2.73756 13.6797 2.66732 13.5102 2.66732 13.3334V7.33335H13.334V13.3334ZM13.334 6.00002H2.66732V4.00002C2.66732 3.82321 2.73756 3.65364 2.86258 3.52862C2.9876 3.40359 3.15717 3.33335 3.33398 3.33335H4.00065V4.00002C4.00065 4.17683 4.07089 4.3464 4.19591 4.47142C4.32094 4.59645 4.49051 4.66669 4.66732 4.66669C4.84413 4.66669 5.0137 4.59645 5.13872 4.47142C5.26375 4.3464 5.33398 4.17683 5.33398 4.00002V3.33335H10.6673V4.00002C10.6673 4.17683 10.7376 4.3464 10.8626 4.47142C10.9876 4.59645 11.1572 4.66669 11.334 4.66669C11.5108 4.66669 11.6804 4.59645 11.8054 4.47142C11.9304 4.3464 12.0007 4.17683 12.0007 4.00002V3.33335H12.6673C12.8441 3.33335 13.0137 3.40359 13.1387 3.52862C13.2637 3.65364 13.334 3.82321 13.334 4.00002V6.00002ZM4.66732 10C4.79917 10 4.92807 9.96092 5.0377 9.88767C5.14733 9.81441 5.23278 9.71029 5.28324 9.58848C5.3337 9.46666 5.3469 9.33261 5.32117 9.20329C5.29545 9.07397 5.23196 8.95518 5.13872 8.86195C5.04549 8.76871 4.9267 8.70522 4.79738 8.6795C4.66806 8.65377 4.53401 8.66698 4.4122 8.71743C4.29038 8.76789 4.18626 8.85334 4.113 8.96297C4.03975 9.07261 4.00065 9.2015 4.00065 9.33335C4.00065 9.51016 4.07089 9.67973 4.19591 9.80476C4.32094 9.92978 4.49051 10 4.66732 10ZM4.66732 12.6667C4.79917 12.6667 4.92807 12.6276 5.0377 12.5543C5.14733 12.4811 5.23278 12.377 5.28324 12.2551C5.3337 12.1333 5.3469 11.9993 5.32117 11.87C5.29545 11.7406 5.23196 11.6219 5.13872 11.5286C5.04549 11.4354 4.9267 11.3719 4.79738 11.3462C4.66806 11.3204 4.53401 11.3336 4.4122 11.3841C4.29038 11.4346 4.18626 11.52 4.113 11.6296C4.03975 11.7393 4.00065 11.8682 4.00065 12C4.00065 12.1768 4.07089 12.3464 4.19591 12.4714C4.32094 12.5964 4.49051 12.6667 4.66732 12.6667Z"
+              fill="#FFA454"
+            />
+          </svg>
+        </span>
+        <span
+          class="bg-[#FFECE2] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue"
+          >Aug 09 2020</span
+        >
+      </li>
+    </ul>
+    <h2 class="font-bold text-[30px] text-navy-blue mb-[25px]">
+      Mauris at orci non vulputate diam tincidunt nec.
+    </h2>
+    <p class="text-[#8A8FB9] leading-[26px] font-lato text-[16px] mb-[30px]">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis
+      quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae
+      ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate
+      id id dictum at.
+    </p>
+    <ul class="grid grid-cols-2 gap-x-[30px] mb-[45px]">
+      <li class="h-[245px]">
+        <img class="w-full h-full object-cover" src="/images/article-img.jpg" alt="Woman" />
+      </li>
+      <li class="h-[245px]">
+        <img class="w-full h-full object-cover" src="/images/article-img.jpg" alt="Woman" />
+      </li>
+    </ul>
+    <p class="text-[#8A8FB9] leading-[26px] font-lato text-[16px] mb-[50px]">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus
+      est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam
+      rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem
+      ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est,
+      nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam
+      rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem
+      ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc
+    </p>
+    <ul
+      class="flex items-center justify-center gap-x-[10px] p-[10px] mb-[25px]"
+    >
+      <li>
+        <a
+          href="#"
+          target="_blank"
+          class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[25px] h-[25px] rounded-[50%]"
+        ></a>
+      </li>
+      <li>
+        <a
+          href="#"
+          target="_blank"
+          class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[25px] h-[25px] rounded-[50%]"
+        ></a>
+      </li>
+      <li>
+        <a
+          href="#"
+          target="_blank"
+          class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[25px] h-[25px] rounded-[50%]"
+        ></a>
+      </li>
+    </ul>
+    <div class="flex items-center justify-between mb-[110px]">
+      <button
+        class="flex items-center gap-x-[5px] font-lato font-medium text-[16px] text-[#8A8FB9]"
+        type="button"
+      >
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_117_3044)">
+            <path
+              d="M4.90215 6.82545L1.13398 10.5754C1.13376 10.5757 1.13358 10.5759 1.13333 10.5761C0.850927 10.858 0.851829 11.3161 1.1334 11.5971C1.13362 11.5973 1.1338 11.5975 1.13405 11.5977L4.90223 15.3477C5.18452 15.6287 5.64116 15.6276 5.92212 15.3453C6.20308 15.063 6.202 14.6064 5.9197 14.3254L3.38975 11.8077H18.6623C19.0606 11.8077 19.3834 11.4849 19.3834 11.0866C19.3834 10.6883 19.0606 10.3654 18.6623 10.3654H3.38975L5.91963 7.84776C6.20192 7.5668 6.20301 7.1102 5.92205 6.8279C5.64105 6.54554 5.18441 6.54456 4.90215 6.82545Z"
+              fill="#8A8FB9"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_117_3044">
+              <rect
+                width="18.4615"
+                height="18.4615"
+                fill="white"
+                transform="matrix(0 -1 1 0 0.921875 19.3076)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <span> Previous Post </span>
+      </button>
+      <button
+        class="flex items-center gap-x-[5px] font-lato font-medium text-[16px] text-[#8A8FB9]"
+        type="button"
+      >
+        <span>Next Post</span>
+        <svg
+          width="19"
+          height="20"
+          viewBox="0 0 19 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clip-path="url(#clip0_117_3039)">
+            <path
+              d="M14.635 14.1942L18.4031 10.4442C18.4033 10.444 18.4035 10.4437 18.4038 10.4435C18.6862 10.1616 18.6853 9.70355 18.4037 9.42259C18.4035 9.42237 18.4033 9.42212 18.4031 9.4219L14.6349 5.67191C14.3526 5.39099 13.896 5.39203 13.615 5.67436C13.334 5.95666 13.3351 6.41326 13.6174 6.69422L16.1474 9.2119H0.874836C0.476543 9.2119 0.153683 9.53476 0.153683 9.93306C0.153683 10.3313 0.476543 10.6542 0.874836 10.6542H16.1474L13.6175 13.1719C13.3352 13.4529 13.3341 13.9095 13.6151 14.1917C13.8961 14.4741 14.3527 14.4751 14.635 14.1942Z"
+              fill="#8A8FB9"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_117_3039">
+              <rect
+                width="18.4615"
+                height="18.4615"
+                fill="white"
+                transform="matrix(0 1 -1 0 18.6152 0.846069)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+    <form class="w-full">
+      <div class="flex items-center gap-x-[35px] mb-[45px]">
+        <div
+          class="relative flex items-center h-[42px] w-full border-[1px] border-[#8A8FB9]"
+        >
+          <span class="absolute left-[10px]">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.2308 12.2865V11.1627C11.2308 10.5666 10.994 9.99488 10.5725 9.57336C10.151 9.15184 9.57929 8.91504 8.98317 8.91504H4.48788C3.89177 8.91504 3.32007 9.15184 2.89855 9.57336C2.47704 9.99488 2.24023 10.5666 2.24023 11.1627V12.2865"
+                fill="#8A8FB9"
+              />
+              <path
+                d="M6.73397 6.6679C7.97532 6.6679 8.98162 5.6616 8.98162 4.42025C8.98162 3.17891 7.97532 2.17261 6.73397 2.17261C5.49263 2.17261 4.48633 3.17891 4.48633 4.42025C4.48633 5.6616 5.49263 6.6679 6.73397 6.6679Z"
+                fill="#8A8FB9"
+              />
+            </svg>
+          </span>
+          <input
+            class="w-full h-full pl-[30px] py-[10px] pr-[20px] text-[#8A8FB9] font-lato text-[16px] outline-none"
+            type="text"
+            placeholder="Your Name*"
+            required
+          />
+        </div>
+        <div
+          class="relative flex items-center h-[42px] w-full border-[1px] border-[#8A8FB9]"
+        >
+          <span class="absolute left-[10px]">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 15 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.84257 2.85767H11.8332C12.4513 2.85767 12.957 3.36339 12.957 3.98149V10.7244C12.957 11.3425 12.4513 11.8483 11.8332 11.8483H2.84257C2.22447 11.8483 1.71875 11.3425 1.71875 10.7244V3.98149C1.71875 3.36339 2.22447 2.85767 2.84257 2.85767Z"
+                fill="#8A8FB9"
+              />
+              <path
+                d="M12.957 3.98108L7.33787 7.91446L1.71875 3.98108"
+                stroke="white"
+                stroke-width="1.12382"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <input
+            class="w-full h-full pl-[30px] py-[10px] pr-[20px] text-[#8A8FB9] font-lato text-[16px] outline-none"
+            type="email"
+            placeholder="Write Your Email*"
+            required
+          />
+        </div>
+      </div>
+      <div class="relative mb-[20px]">
+        <span class="absolute left-[20px] top-[25px]">
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.0285 6.84475C12.0304 7.5864 11.8571 8.31801 11.5228 8.98001C11.1263 9.77329 10.5168 10.4405 9.76254 10.907C9.00828 11.3734 8.13906 11.6207 7.25222 11.621C6.51057 11.6229 5.77896 11.4497 5.11696 11.1153L1.91406 12.1829L2.98169 8.98001C2.64732 8.31801 2.47404 7.5864 2.47597 6.84475C2.47632 5.95791 2.72356 5.08869 3.19001 4.33443C3.65645 3.58018 4.32368 2.97068 5.11696 2.57422C5.77896 2.23984 6.51057 2.06656 7.25222 2.0685H7.53318C8.7044 2.13311 9.81063 2.62747 10.6401 3.4569C11.4695 4.28634 11.9639 5.39257 12.0285 6.56379V6.84475Z"
+              fill="#8A8FB9"
+            />
+          </svg>
+        </span>
+        <textarea
+          class="border-[1px] border-[#8A8FB9] w-full h-[200px] pl-[40px] pr-[20px] py-[20px] resize-none outline-none"
+          cols="30"
+          rows="10"
+          placeholder="Write your comment*"
+          required
+        ></textarea>
+      </div>
+      <div class="flex items-center gap-x-[6px] mb-[45px]">
+        <input type="checkbox" class="w-[9px] h-[9px]" id="feedbackBox" />
+        <label class="font-lato font-medium text-[14px] text-[#8A91AB]" for="feedbackBox">Save my name, email, and website in this browser for the next time I comment.</label>
+      </div>
+      <button class="flex items-center justify-center w-full h-[50px] text-white font-semibold text-[18px] bg-pink rounded-[3px]" type="submit">Continue Shipping</button>
+    </form>
+  </div>
+</template>
+
+<script setup></script>
