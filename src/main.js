@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import "./style.css";
 import store from "./store";
+import router from "./router"
 import App from "./App.vue";
 import BaseHeading from "./components/base/BaseHeading.vue";
 import BaseFilter from "./components/base/BaseFilter.vue";
@@ -13,6 +14,7 @@ import BasePagination from "./components/base/BasePagination.vue";
 const app = createApp(App);
 
 app.use(store);
+app.use(router);
 
 app.component("BaseHeading", BaseHeading);
 app.component("BaseFilter", BaseFilter);

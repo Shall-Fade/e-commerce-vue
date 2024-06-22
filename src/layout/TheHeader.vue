@@ -6,51 +6,56 @@
     >
       <div class="flex items-center gap-x-[80px]">
         <span class="text-navy-blue text-[34px] font-bold">
-          <a href="#">Hekto</a>
+          <RouterLink to="/">Hekto</RouterLink>
         </span>
         <nav>
           <ul class="flex items-center gap-x-[35px] font-lato">
             <li>
-              <a
+              <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                href="#"
-                >Home</a
+                to="/"
+                >Home</RouterLink
               >
             </li>
             <li>
-              <a
+              <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                href="#"
-                >Pages</a
+                to="/about"
               >
+                About Us
+              </RouterLink>
             </li>
             <li>
-              <a
+              <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                href="#"
-                >Products</a
+                to="/"
               >
+                Products
+              </RouterLink>
             </li>
             <li>
-              <a
+              <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                href="#"
-                >Blog</a
+                to="/blog"
               >
+                Blog
+              </RouterLink>
             </li>
             <li>
-              <a
+              <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                href="#"
-                >Shop</a
+                to="/"
               >
+                Shop
+              </RouterLink>
             </li>
             <li>
-              <a
+              <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                href="#"
-                >Contact</a
+                to="/contact"
               >
+                Contact
+              </RouterLink>
             </li>
           </ul>
         </nav>

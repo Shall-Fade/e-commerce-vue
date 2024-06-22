@@ -2,13 +2,15 @@
   <div class="font-josefin text-[16px] font-normal text-navy-blue bg-white">
     <TheHeader />
     <main>
+      <RouterView />
       <!-- <MainPage /> -->
       <!-- <ProductDetailPage /> -->
       <!-- <CartPage /> -->
       <!-- <OrderCompletedPage /> -->
       <!-- <AuthPage /> -->
       <!-- <BlogPage /> -->
-      <ArticlePage />
+      <!-- <ArticlePage /> -->
+      <!-- <AboutPage /> -->
     </main>
     <TheFooter />
   </div>
@@ -24,4 +26,5 @@ import OrderCompletedPage from "./views/OrderCompletedPage.vue";
 import AuthPage from "./views/AuthPage.vue";
 import BlogPage from "./views/BlogPage.vue";
 import ArticlePage from "./views/ArticlePage.vue";
+import AboutPage from "./views/AboutPage.vue";
 </script>
