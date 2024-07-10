@@ -17,7 +17,7 @@
               />
             </svg>
           </span>
-          <span class="bg-[#FFE7F9] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue">Surf Auxion</span>
+          <span class="bg-[#FFE7F9] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue">{{ article.author }}</span>
         </li>
         <li class="flex items-center gap-x-[8px]">
           <span>
@@ -34,18 +34,29 @@
               />
             </svg>
           </span>
-          <span class="bg-[#FFECE2] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue">Aug 09 2020</span>
+          <span class="bg-[#FFECE2] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue">{{ article.date }}</span>
         </li>
       </ul>
-      <h2 class="font-bold text-[30px] text-navy-blue mb-[25px]">Mauris at orci non vulputate diam tincidunt nec.</h2>
+      <h2 class="font-bold text-[30px] text-navy-blue mb-[25px]">{{ article.title }}</h2>
       <p class="text-[#8A8FB9] leading-[26px] font-lato text-[16px] mb-[30px]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis
-        quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae
-        ultrices in in neque, porta dignissim. Adipiscing purus, cursus
-        vulputate id id dictum at.
+        {{ article.smallDesc }}
       </p>
-      <a href="#" class="inline-flex items-center gap-x-[5px] font-lato font-semibold text-[18px] text-navy-blue after:content-[''] after:w-[5px] after:h-[5px] after:bg-pink after:rounded-[50%]">Read More</a>
+      <RouterLink @click="openArticle" :to="{path: `/blog/${article.title}`}" class="inline-flex items-center gap-x-[5px] font-lato font-semibold text-[18px] text-navy-blue after:content-[''] after:w-[5px] after:h-[5px] after:bg-pink after:rounded-[50%] hover:after:translate-x-1 after:duration-150 hover:after:duration-150 hover:text-pink duration-150">Read More</RouterLink>
   </article>
 </template>
 
-<script setup></script>
+<script setup>
+import { useStore } from 'vuex';
+import { defineProps, computed } from 'vue';
+
+// Variables
+const props = defineProps(['article'])
+const store = useStore();
+
+// Open Article
+function openArticle() {
+  store.commit("OPEN_ARTICLE", props.article);
+}
+
+// console.log(props.article);
+</script>

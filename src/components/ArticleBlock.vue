@@ -1,6 +1,10 @@
 <template>
   <div>
-    <img class="w-full h-[450px] mb-[25px] rounded-[6px] object-cover" src="/images/article-img.jpg" alt="Woman" />
+    <img
+      class="w-full h-[450px] mb-[25px] rounded-[6px] object-cover"
+      src="/images/article-img.jpg"
+      alt="Woman"
+    />
     <ul class="flex items-center gap-x-[25px] mb-[25px]">
       <li class="flex items-center gap-x-[8px]">
         <span>
@@ -19,7 +23,7 @@
         </span>
         <span
           class="bg-[#FFE7F9] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue"
-          >Surf Auxion</span
+          >{{ openedArticle.author }}</span
         >
       </li>
       <li class="flex items-center gap-x-[8px]">
@@ -39,35 +43,34 @@
         </span>
         <span
           class="bg-[#FFECE2] w-[160px] h-[23px] flex items-center justify-center rounded-[2px] text-[14px] text-navy-blue"
-          >Aug 09 2020</span
+          >{{ openedArticle.date }}</span
         >
       </li>
     </ul>
     <h2 class="font-bold text-[30px] text-navy-blue mb-[25px]">
-      Mauris at orci non vulputate diam tincidunt nec.
+      {{ openedArticle.title }}
     </h2>
     <p class="text-[#8A8FB9] leading-[26px] font-lato text-[16px] mb-[30px]">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis
-      quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae
-      ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate
-      id id dictum at.
+      {{ openedArticle.smallDesc }}
     </p>
     <ul class="grid grid-cols-2 gap-x-[30px] mb-[45px]">
       <li class="h-[245px]">
-        <img class="w-full h-full object-cover" src="/images/article-img.jpg" alt="Woman" />
+        <img
+          class="w-full h-full object-cover"
+          src="/images/article-img.jpg"
+          alt="Woman"
+        />
       </li>
       <li class="h-[245px]">
-        <img class="w-full h-full object-cover" src="/images/article-img.jpg" alt="Woman" />
+        <img
+          class="w-full h-full object-cover"
+          src="/images/article-img.jpg"
+          alt="Woman"
+        />
       </li>
     </ul>
     <p class="text-[#8A8FB9] leading-[26px] font-lato text-[16px] mb-[50px]">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus
-      est, nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam
-      rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est,
-      nunc, montes, lacus consequat integer viverra. Sit morbi etiam quam
-      rhoncus. Velit in arcu platea donec vitae ante posuere malesuada.Lorem
-      ipsum dolor sit amet, consectetur adipiscing elit. Velit dapibus est, nunc
+      {{ openedArticle.desc }}
     </p>
     <ul
       class="flex items-center justify-center gap-x-[10px] p-[10px] mb-[25px]"
@@ -243,11 +246,28 @@
       </div>
       <div class="flex items-center gap-x-[6px] mb-[45px]">
         <input type="checkbox" class="w-[9px] h-[9px]" id="feedbackBox" />
-        <label class="font-lato font-medium text-[14px] text-[#8A91AB]" for="feedbackBox">Save my name, email, and website in this browser for the next time I comment.</label>
+        <label
+          class="font-lato font-medium text-[14px] text-[#8A91AB]"
+          for="feedbackBox"
+          >Save my name, email, and website in this browser for the next time I
+          comment.</label
+        >
       </div>
-      <button class="flex items-center justify-center w-full h-[50px] text-white font-semibold text-[18px] bg-pink rounded-[3px]" type="submit">Continue Shipping</button>
+      <button
+        class="flex items-center justify-center w-full h-[50px] text-white font-semibold text-[18px] bg-pink rounded-[3px]"
+        type="submit"
+      >
+        Continue Shipping
+      </button>
     </form>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useStore } from "vuex";
+import { computed } from "vue";
+
+// Variables
+const store = useStore();
+const openedArticle = computed(() => store.state.openedArticle);
+</script>
