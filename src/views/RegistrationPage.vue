@@ -1,12 +1,11 @@
 <template>
     <div>
-        <base-heading>My account</base-heading>
         <div class="max-w-[1170px] w-full mx-auto my-[120px]">
-            <LoginBlock />
+            <RegistrationBlock />
         </div>
     </div>
 </template>
 
 <script setup>
-import LoginBlock from '../components/LoginBlock.vue';
+import RegistrationBlock from '../components/RegistrationBlock.vue';
 </script>

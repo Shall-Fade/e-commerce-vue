@@ -1,8 +1,8 @@
 <template>
   <div>
-    <base-heading>
+    <!-- <base-heading>
       Product Details
-    </base-heading>
+    </base-heading> -->
     <ProductDetailCard />
   </div>
 </template>

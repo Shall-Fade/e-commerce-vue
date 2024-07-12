@@ -7,7 +7,7 @@
       <!-- <ProductDetailPage /> -->
       <!-- <CartPage /> -->
       <!-- <OrderCompletedPage /> -->
-      <!-- <AuthPage /> -->
+      <!-- <LoginPage /> -->
       <!-- <BlogPage /> -->
       <!-- <ArticlePage /> -->
       <!-- <AboutPage /> -->
@@ -23,7 +23,7 @@ import MainPage from "./views/MainPage.vue";
 import ProductDetailPage from "./views/ProductDetailPage.vue";
 import CartPage from "./views/CartPage.vue";
 import OrderCompletedPage from "./views/OrderCompletedPage.vue";
-import AuthPage from "./views/AuthPage.vue";
+import LoginPage from "./views/LoginPage.vue";
 import BlogPage from "./views/BlogPage.vue";
 import ArticlePage from "./views/ArticlePage.vue";
 import AboutPage from "./views/AboutPage.vue";

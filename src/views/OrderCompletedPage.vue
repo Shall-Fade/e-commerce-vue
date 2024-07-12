@@ -1,6 +1,5 @@
 <template>
   <div>
-    <base-heading> Order Completed </base-heading>
     <section
       class="flex flex-col justify-center max-w-[1170px] w-full mx-auto my-[180px] h-full"
     >
@@ -13,7 +12,7 @@
           completed within 3-6 hours. You will receive an email confirmation
           when your order is completed.
         </p>
-        <button class="mx-auto w-[210px] h-[60px] flex items-center justify-center bg-pink rounded-[3px] font-lato font-semibold text-[16px] text-white" type="button">Continue Shopping</button>
+        <RouterLink to="/products" class="mx-auto w-[210px] h-[60px] flex items-center justify-center bg-pink rounded-[3px] font-lato font-semibold text-[16px] text-white" type="button">Continue Shopping</RouterLink>
       </div>
     </section>
   </div>

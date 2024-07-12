@@ -47,7 +47,7 @@
 
 <script setup>
 import { useStore } from 'vuex';
-import { defineProps, computed } from 'vue';
+import { defineProps } from 'vue';
 
 // Variables
 const props = defineProps(['article'])

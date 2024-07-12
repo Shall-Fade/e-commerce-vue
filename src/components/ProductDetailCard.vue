@@ -1,27 +1,61 @@
 <template>
-  <section class="max-w-[1170px] w-full mx-auto my-0 mt-[120px]">
+  <section
+    class="max-w-[1170px] w-full mx-auto my-0 mt-[120px]"
+    v-if="openedProduct"
+  >
     <div class="flex gap-x-[40px] mb-[140px]">
-      <ul class="grid grid-cols-[155px_375px] grid-rows-3 gap-x-[20px] gap-y-[10px] ">
-        <li class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2">
-          <img class="w-full h-full rounded-[3px]" src="" alt="" />
+      <ul
+        class="grid grid-cols-[155px_375px] grid-rows-3 gap-x-[20px] gap-y-[10px]"
+      >
+        <li
+          class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2"
+        >
+          <img
+            class="w-full h-full rounded-[3px]"
+            :src="openedProduct.img"
+            :alt="openedProduct.title"
+          />
         </li>
-        <li class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2">
-          <img class="w-full h-full rounded-[3px]" src="" alt="" />
+        <li
+          class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2"
+        >
+          <img
+            class="w-full h-full rounded-[3px]"
+            :src="openedProduct.img"
+            :alt="openedProduct.title"
+          />
         </li>
-        <li class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2">
-          <img class="w-full h-full rounded-[3px]" src="" alt="" />
+        <li
+          class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2"
+        >
+          <img
+            class="w-full h-full rounded-[3px]"
+            :src="openedProduct.img"
+            :alt="openedProduct.title"
+          />
         </li>
-        <li class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2">
-          <img class="w-full h-full rounded-[3px]" src="" alt="" />
+        <li
+          class="w-full h-full row-span-1 col-start-1 last:row-start-1 last:row-end-4 last:col-start-2"
+        >
+          <img
+            class="w-full h-full rounded-[3px]"
+            :src="openedProduct.img"
+            :alt="openedProduct.title"
+          />
         </li>
       </ul>
       <div class="mt-[60px]">
-        <span class="font-semibold text-[36px] text-navy-blue pb-[10px]"
-          >Playwood arm chair</span
-        >
+        <span class="font-semibold text-[36px] text-navy-blue pb-[10px]">
+          {{ openedProduct.title }}
+        </span>
         <div class="flex items-center gap-x-[5px] mb-[15px]">
           <ul class="flex items-center gap-x-[3px]">
-            <li class="w-[12px] h-[12px]">
+            <!-- Yellow Stars -->
+            <li
+              v-for="score in openedProduct.score"
+              :key="score"
+              class="w-[12px] h-[12px]"
+            >
               <svg
                 width="12"
                 height="12"
@@ -30,12 +64,17 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M10.6415 4.13792L7.66615 3.7055L6.33608 1.00901C6.29975 0.935185 6.23998 0.875419 6.16615 0.839091C5.981 0.747685 5.756 0.823857 5.66342 1.00901L4.33334 3.7055L1.35795 4.13792C1.27592 4.14964 1.20092 4.18831 1.1435 4.2469C1.07408 4.31826 1.03582 4.41425 1.03714 4.51379C1.03846 4.61333 1.07924 4.70828 1.15053 4.77776L3.30326 6.87659L2.79467 9.84026C2.78274 9.9092 2.79037 9.98011 2.81669 10.0449C2.84301 10.1098 2.88697 10.1659 2.94358 10.207C3.00019 10.2481 3.06719 10.2726 3.13697 10.2776C3.20676 10.2825 3.27655 10.2679 3.33842 10.2352L5.99975 8.83597L8.66108 10.2352C8.73373 10.2739 8.81811 10.2867 8.89897 10.2727C9.10287 10.2375 9.23998 10.0442 9.20483 9.84026L8.69623 6.87659L10.849 4.77776C10.9076 4.72034 10.9462 4.64534 10.958 4.56331C10.9896 4.35823 10.8466 4.16839 10.6415 4.13792Z"
+                  d="M10.9006 4.60447L7.61472 4.12692L6.14585 1.14907C6.10573 1.06753 6.03973 1.00153 5.95819 0.961413C5.75372 0.860469 5.50524 0.944589 5.403 1.14907L3.93413 4.12692L0.648265 4.60447C0.557674 4.61741 0.474848 4.66012 0.411435 4.72482C0.334771 4.80362 0.292526 4.90963 0.293982 5.01956C0.295438 5.12949 0.340476 5.23434 0.4192 5.31108L2.79657 7.62891L2.2349 10.9018C2.22173 10.978 2.23016 11.0563 2.25922 11.1279C2.28829 11.1995 2.33683 11.2615 2.39935 11.3069C2.46187 11.3523 2.53586 11.3793 2.61293 11.3848C2.69 11.3903 2.76706 11.374 2.83539 11.338L5.77442 9.79274L8.71346 11.338C8.79369 11.3807 8.88687 11.3949 8.97617 11.3794C9.20135 11.3406 9.35277 11.127 9.31394 10.9018L8.75228 7.62891L11.1296 5.31108C11.1944 5.24766 11.2371 5.16484 11.25 5.07425C11.2849 4.84777 11.1271 4.63811 10.9006 4.60447V4.60447Z"
                   fill="#FFC416"
                 />
               </svg>
             </li>
-            <li class="w-[12px] h-[12px]">
+            <!-- Grey Stars -->
+            <li
+              v-for="score in 5 - openedProduct.score"
+              :key="score"
+              class="w-[12px] h-[12px]"
+            >
               <svg
                 width="12"
                 height="12"
@@ -44,50 +83,8 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M10.6415 4.13792L7.66615 3.7055L6.33608 1.00901C6.29975 0.935185 6.23998 0.875419 6.16615 0.839091C5.981 0.747685 5.756 0.823857 5.66342 1.00901L4.33334 3.7055L1.35795 4.13792C1.27592 4.14964 1.20092 4.18831 1.1435 4.2469C1.07408 4.31826 1.03582 4.41425 1.03714 4.51379C1.03846 4.61333 1.07924 4.70828 1.15053 4.77776L3.30326 6.87659L2.79467 9.84026C2.78274 9.9092 2.79037 9.98011 2.81669 10.0449C2.84301 10.1098 2.88697 10.1659 2.94358 10.207C3.00019 10.2481 3.06719 10.2726 3.13697 10.2776C3.20676 10.2825 3.27655 10.2679 3.33842 10.2352L5.99975 8.83597L8.66108 10.2352C8.73373 10.2739 8.81811 10.2867 8.89897 10.2727C9.10287 10.2375 9.23998 10.0442 9.20483 9.84026L8.69623 6.87659L10.849 4.77776C10.9076 4.72034 10.9462 4.64534 10.958 4.56331C10.9896 4.35823 10.8466 4.16839 10.6415 4.13792Z"
-                  fill="#FFC416"
-                />
-              </svg>
-            </li>
-            <li class="w-[12px] h-[12px]">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6415 4.13792L7.66615 3.7055L6.33608 1.00901C6.29975 0.935185 6.23998 0.875419 6.16615 0.839091C5.981 0.747685 5.756 0.823857 5.66342 1.00901L4.33334 3.7055L1.35795 4.13792C1.27592 4.14964 1.20092 4.18831 1.1435 4.2469C1.07408 4.31826 1.03582 4.41425 1.03714 4.51379C1.03846 4.61333 1.07924 4.70828 1.15053 4.77776L3.30326 6.87659L2.79467 9.84026C2.78274 9.9092 2.79037 9.98011 2.81669 10.0449C2.84301 10.1098 2.88697 10.1659 2.94358 10.207C3.00019 10.2481 3.06719 10.2726 3.13697 10.2776C3.20676 10.2825 3.27655 10.2679 3.33842 10.2352L5.99975 8.83597L8.66108 10.2352C8.73373 10.2739 8.81811 10.2867 8.89897 10.2727C9.10287 10.2375 9.23998 10.0442 9.20483 9.84026L8.69623 6.87659L10.849 4.77776C10.9076 4.72034 10.9462 4.64534 10.958 4.56331C10.9896 4.35823 10.8466 4.16839 10.6415 4.13792Z"
-                  fill="#FFC416"
-                />
-              </svg>
-            </li>
-            <li class="w-[12px] h-[12px]">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6415 4.13792L7.66615 3.7055L6.33608 1.00901C6.29975 0.935185 6.23998 0.875419 6.16615 0.839091C5.981 0.747685 5.756 0.823857 5.66342 1.00901L4.33334 3.7055L1.35795 4.13792C1.27592 4.14964 1.20092 4.18831 1.1435 4.2469C1.07408 4.31826 1.03582 4.41425 1.03714 4.51379C1.03846 4.61333 1.07924 4.70828 1.15053 4.77776L3.30326 6.87659L2.79467 9.84026C2.78274 9.9092 2.79037 9.98011 2.81669 10.0449C2.84301 10.1098 2.88697 10.1659 2.94358 10.207C3.00019 10.2481 3.06719 10.2726 3.13697 10.2776C3.20676 10.2825 3.27655 10.2679 3.33842 10.2352L5.99975 8.83597L8.66108 10.2352C8.73373 10.2739 8.81811 10.2867 8.89897 10.2727C9.10287 10.2375 9.23998 10.0442 9.20483 9.84026L8.69623 6.87659L10.849 4.77776C10.9076 4.72034 10.9462 4.64534 10.958 4.56331C10.9896 4.35823 10.8466 4.16839 10.6415 4.13792Z"
-                  fill="#FFC416"
-                />
-              </svg>
-            </li>
-            <li class="w-[12px] h-[12px]">
-              <svg
-                width="12"
-                height="12"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.6415 4.13792L7.66615 3.7055L6.33608 1.00901C6.29975 0.935185 6.23998 0.875419 6.16615 0.839091C5.981 0.747685 5.756 0.823857 5.66342 1.00901L4.33334 3.7055L1.35795 4.13792C1.27592 4.14964 1.20092 4.18831 1.1435 4.2469C1.07408 4.31826 1.03582 4.41425 1.03714 4.51379C1.03846 4.61333 1.07924 4.70828 1.15053 4.77776L3.30326 6.87659L2.79467 9.84026C2.78274 9.9092 2.79037 9.98011 2.81669 10.0449C2.84301 10.1098 2.88697 10.1659 2.94358 10.207C3.00019 10.2481 3.06719 10.2726 3.13697 10.2776C3.20676 10.2825 3.27655 10.2679 3.33842 10.2352L5.99975 8.83597L8.66108 10.2352C8.73373 10.2739 8.81811 10.2867 8.89897 10.2727C9.10287 10.2375 9.23998 10.0442 9.20483 9.84026L8.69623 6.87659L10.849 4.77776C10.9076 4.72034 10.9462 4.64534 10.958 4.56331C10.9896 4.35823 10.8466 4.16839 10.6415 4.13792Z"
-                  fill="#FFC416"
+                  d="M10.822 4.60447L7.5361 4.12692L6.06723 1.14907C6.02711 1.06753 5.96111 1.00153 5.87958 0.961413C5.6751 0.860469 5.42663 0.944589 5.32439 1.14907L3.85552 4.12692L0.569652 4.60447C0.479061 4.61741 0.396235 4.66012 0.332821 4.72482C0.256158 4.80362 0.213912 4.90963 0.215368 5.01956C0.216824 5.12949 0.261862 5.23434 0.340586 5.31108L2.71795 7.62891L2.15629 10.9018C2.14312 10.978 2.15154 11.0563 2.18061 11.1279C2.20968 11.1995 2.25822 11.2615 2.32074 11.3069C2.38325 11.3523 2.45724 11.3793 2.53431 11.3848C2.61138 11.3903 2.68845 11.374 2.75678 11.338L5.69581 9.79274L8.63484 11.338C8.71508 11.3807 8.80826 11.3949 8.89756 11.3794C9.12274 11.3406 9.27416 11.127 9.23533 10.9018L8.67367 7.62891L11.051 5.31108C11.1157 5.24766 11.1584 5.16484 11.1714 5.07425C11.2063 4.84777 11.0484 4.63811 10.822 4.60447V4.60447Z"
+                  fill="#B2B2B2"
                 />
               </svg>
             </li>
@@ -95,23 +92,35 @@
           <span class="text-[14px] text-navy-blue leading-[29px]">(22)</span>
         </div>
         <div class="flex items-center gap-x-[20px] mb-[10px]">
-          <span class="text-[16px] leading-[29px] text-navy-blue">$32.00</span>
-          <span class="text-[16px] leading-[29px] text-pink line-through"
-            >$32.00</span
-          >
+          <span class="text-[16px] leading-[29px] text-navy-blue">${{
+            openedProduct.newPrice
+          }}</span>
+          <span class="text-[16px] leading-[29px] text-pink line-through">${{
+            openedProduct.oldPrice
+          }}</span>
         </div>
         <span class="block font-semibold text-navy-blue text-[16px] mb-[12px]"
-          >Color</span
+          >Color: <span>{{ openedProduct.color }}</span></span
         >
         <p
           class="max-w-[550px] font-semibold text-[16px] leading-[29px] text-[#A9ACC6] mb-[30px]"
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus
-          porttitor purus, et volutpat sit.
+          {{ openedProduct.desc }}
         </p>
         <div class="flex items-center gap-x-[20px] mb-[17px]">
-          <button class="text-[16px] leading-[29px] text-navy-blue" type="button">Add To Cart</button>
-          <button class="flex items-center justify-center w-[31px] h-[31px]" type="button">
+          <button
+            @click="addCart()"
+            class="text-[16px] leading-[29px] text-navy-blue"
+            type="button"
+          >
+            Add To Cart
+          </button>
+          <button
+            @click="addFavorite()"
+            :class="[isActive ? 'bg-[red] hover:bg-[red] rounded-full' : '']"
+            class="flex items-center justify-center w-[31px] h-[31px]"
+            type="button"
+          >
             <svg
               width="18"
               height="18"
@@ -127,34 +136,79 @@
           </button>
         </div>
         <div class="flex items-center gap-x-[10px] mb-[10px]">
-            <span class="font-semibold text-[16px] leading-[29px] text-navy-blue">Categories:</span>
-            <ul>
-                <li></li>
-            </ul>
+          <span class="font-semibold text-[16px] leading-[29px] text-navy-blue"
+            >Categories:</span
+          >
+          <ul class="flex items-center gap-x-[15px]">
+            <li
+              class="font-semibold text-[16px] leading-[29px] text-[#A9ACC6]"
+              v-for="category in openedProduct.categories"
+            >
+              {{ category }}
+            </li>
+          </ul>
         </div>
         <div class="flex items-center gap-x-[10px] mb-[10px]">
-            <span class="font-semibold text-[16px] leading-[29px] text-navy-blue">Tags:</span>
-            <ul>
-                <li></li>
-            </ul>
+          <span class="font-semibold text-[16px] leading-[29px] text-navy-blue"
+            >Tags:</span
+          >
+          <ul>
+            <li></li>
+          </ul>
         </div>
         <div class="flex items-center gap-x-[10px] mb-[10px]">
-            <span class="font-semibold text-[16px] leading-[29px] text-navy-blue">Share:</span>
-            <ul class="flex items-center gap-x-[10px]">
-                <li>
-                    <a href="#" target="_blank" class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[12px] h-[12px] rounded-[50%]"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[12px] h-[12px] rounded-[50%]"></a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[12px] h-[12px] rounded-[50%]"></a>
-                </li>
-            </ul>
+          <span class="font-semibold text-[16px] leading-[29px] text-navy-blue"
+            >Share:</span
+          >
+          <ul class="flex items-center gap-x-[10px]">
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[12px] h-[12px] rounded-[50%]"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[12px] h-[12px] rounded-[50%]"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                class="flex items-center justify-center bg-navy-blue hover:bg-pink duration-150 w-[12px] h-[12px] rounded-[50%]"
+              ></a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { useStore } from "vuex";
+import { computed, ref } from "vue";
+
+// Variables
+const store = useStore();
+const cart = computed(() => store.state.cart);
+const openedProduct = computed(() => store.state.openedProduct);
+const isActive = ref();
+
+// Add product to cart
+function addCart() {
+  if(!cart.value.some((item) => item.code === openedProduct.value.code)) {
+    openedProduct.value.quantity = 1;
+    cart.value.push(openedProduct.value);
+  }
+}
+
+// Add to favorites
+function addFavorite() {
+  isActive.value = !isActive.value;
+}
+</script>

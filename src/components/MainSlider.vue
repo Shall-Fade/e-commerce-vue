@@ -7,7 +7,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est
         adipiscing in phasellus non in justo.
       </p>
-      <a class="max-w-[160px] w-full h-[50px] flex items-center justify-center bg-pink text-white rounded-[2px] text-[17px]" href="#">Shop Now</a>
+      <RouterLink to="/products" class="max-w-[160px] w-full h-[50px] flex items-center justify-center bg-pink text-white rounded-[2px] text-[17px]" href="#">Shop Now</RouterLink>
     </div>
   </section>
 </template>

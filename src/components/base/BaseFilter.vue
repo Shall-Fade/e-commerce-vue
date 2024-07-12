@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between max-w-[1170px] w-full mx-auto mt-[120px] mb-[120px]">
         <div class="flex flex-col">
             <span class="block mb-[8px] text-[22px] font-bold text-navy-blue">Ecommerce Acceories & Fashion item</span>
             <span class="text-[12px] font-lato text-[#8A8FB9]">About 9,620 results (0.62 seconds)</span>

@@ -6,7 +6,7 @@
         <input class="h-[52px] w-full bg-white border-[#C2C5E1] border-[1px] mb-[13px] pl-[13px] pr-[25px] py-[15px] outline-none font-lato text-[16px] text-[#9096B2] rounded-[2px]" type="password" placeholder="Password">
         <a class="font-lato text-[17px] text-[#9096B2] mb-[23px] text-left mr-auto hover:text-pink duration-150" href="#">Forgot your password?</a>
         <button class="flex items-center justify-center rounded-[3px] text-white bg-pink font-lato font-bold text-[17px] h-[47px] w-full mb-[28px]" type="submit">Sign In</button>
-        <span class="font-lato text-[17px] text-[#9096B2]">Don’t have an Account? <a class="hover:text-pink duration-150" href="#">Create account</a></span>
+        <span class="font-lato text-[17px] text-[#9096B2]">Don’t have an Account? <RouterLink to="/registration" class="hover:text-pink duration-150 ml-[5px]" href="#">Create account</RouterLink></span>
     </form>
 </template>
 

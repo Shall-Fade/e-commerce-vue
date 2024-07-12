@@ -1,44 +1,18 @@
 <template>
-  <div class="max-w-[1170px] w-full mx-auto mt-[140px] mb-[80px]">
+  <div class="max-w-[1170px] w-full mx-auto mb-[80px]">
     <ul class="grid grid-cols-4 gap-y-[80px] justify-items-start">
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
-      </li>
-      <li>
-        <base-product-card-grid />
+      <li v-for="product in products">
+        <base-product-card-grid v-bind:product />
       </li>
     </ul>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useStore } from "vuex";
+import { computed } from "vue";
+
+// Variables
+const store = useStore();
+const products = computed(() => store.state.products);
+</script>

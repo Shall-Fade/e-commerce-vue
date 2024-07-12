@@ -28,7 +28,7 @@
             <li>
               <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                to="/"
+                to="/products"
               >
                 Products
               </RouterLink>
@@ -44,9 +44,9 @@
             <li>
               <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
-                to="/"
+                to="/cart"
               >
-                Shop
+                Cart
               </RouterLink>
             </li>
             <li>

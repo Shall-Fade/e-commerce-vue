@@ -1,6 +1,32 @@
 <template>
   <div>
-    <base-heading>Contact Us</base-heading>
+    <base-heading>
+      <template v-slot:title>Contact Us</template>
+      <template v-slot:breadcrumbs>
+        <ul class="flex items-center gap-x-[10px]">
+          <li
+            class="flex items-center gap-x-[10px] after:w-[5px] after:h-[5px] after:rounded-full after:bg-pink last:after:hidden"
+          >
+            <RouterLink
+              to="/"
+              class="text-[16px] font-lato text-black hover:text-pink duration-150"
+            >
+              Home
+            </RouterLink>
+          </li>
+          <li
+            class="flex items-center gap-x-[10px] after:w-[5px] after:h-[5px] after:rounded-full after:bg-pink last:after:hidden"
+          >
+            <RouterLink
+              to="/blog"
+              class="text-[16px] font-lato text-black hover:text-pink duration-150"
+            >
+              Contact Us
+            </RouterLink>
+          </li>
+        </ul>
+      </template>
+    </base-heading>
     <div
       class="grid grid-cols-2 gap-x-[100px] gap-y-[150px] max-w-[1170px] w-full mx-auto my-[120px]"
     >
@@ -107,16 +133,38 @@
           bibendum quam.
         </p>
         <form>
-            <div class="grid grid-cols-2 gap-x-[35px] gap-y-[35px] mb-[35px]">
-                <input class="w-full h-[45px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] font-lato text-[16px] text-[#8A8FB9] outline-pink" placeholder="Your Name*" required type="text">
-                <input class="w-full h-[45px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] font-lato text-[16px] text-[#8A8FB9] outline-pink" placeholder="Your E-mail" type="email">
-                <input class="col-span-2 w-full h-[45px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] font-lato text-[16px] text-[#8A8FB9] outline-pink" placeholder="Subject*" type="text">
-                <textarea class="col-span-2 w-full h-[170px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] pt-[17px] font-lato text-[16px] text-[#8A8FB9] outline-pink resize-none" placeholder="Type Your Message*" required></textarea>
-            </div>
-            <button class="flex items-center justify-center px-[40px] h-[45px] bg-pink rounded-[3px] text-white text-[16px]" type="submit">Send Mail</button>
+          <div class="grid grid-cols-2 gap-x-[35px] gap-y-[35px] mb-[35px]">
+            <input
+              class="w-full h-[45px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] font-lato text-[16px] text-[#8A8FB9] outline-pink"
+              placeholder="Your Name*"
+              required
+              type="text"
+            />
+            <input
+              class="w-full h-[45px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] font-lato text-[16px] text-[#8A8FB9] outline-pink"
+              placeholder="Your E-mail"
+              type="email"
+            />
+            <input
+              class="col-span-2 w-full h-[45px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] font-lato text-[16px] text-[#8A8FB9] outline-pink"
+              placeholder="Subject*"
+              type="text"
+            />
+            <textarea
+              class="col-span-2 w-full h-[170px] border-[1px] border-[#A4B6C8/70] rounded-[3px] pl-[10px] pr-[20px] pt-[17px] font-lato text-[16px] text-[#8A8FB9] outline-pink resize-none"
+              placeholder="Type Your Message*"
+              required
+            ></textarea>
+          </div>
+          <button
+            class="flex items-center justify-center px-[40px] h-[45px] bg-pink rounded-[3px] text-white text-[16px]"
+            type="submit"
+          >
+            Send Mail
+          </button>
         </form>
       </div>
-      <img class="w-full" src="/images/contact-img.png" alt="Contact Image">
+      <img class="w-full" src="/images/contact-img.png" alt="Contact Image" />
     </div>
   </div>
 </template>
