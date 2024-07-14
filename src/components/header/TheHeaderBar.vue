@@ -71,10 +71,11 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/cart">
+          <RouterLink to="/cart" class="relative">
             <span class="w-[24px] h-[24px]">
                 <img src="../../../public/images/cart-icon.svg" alt="Cart">
             </span>
+            <span v-if="cart.length < 100" class="absolute top-[-5px] right-[-6px] flex items-center justify-center w-[17px] h-[17px] rounded-full text-[12px] bg-white font-bold text-blue">{{ cart.length }}</span>
           </RouterLink>
         </li>
       </ul>
@@ -83,9 +84,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { useStore } from 'vuex';
+import { ref, computed } from 'vue';
 
 // Variables
+const store = useStore();
+const cart = computed(() => store.state.cart);
 const languages = ref(['English', 'Russian', 'Japanese', 'Italian']);
 const currencies = ref(['USD', 'RUB', 'JPY', 'ITL']);
 const currentLanguage = ref("English");

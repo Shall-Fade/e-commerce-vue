@@ -125,6 +125,8 @@ const store = createStore({
     openedArticle: "",
     openedCategory: "",
     openedProduct: "",
+    productView: 'grid',
+    productName: '',
   },
   mutations: {
     OPEN_ARTICLE(state, openedArticle) {
@@ -135,6 +137,12 @@ const store = createStore({
     },
     OPEN_PRODUCT(state, openedProduct) {
       state.openedProduct = openedProduct;
+    },
+    TOGGLE_PRODUCT_VIEW(state, productView) {
+      state.productView = productView;
+    },
+    ADD_PRODUCT_NAME(state, productName) {
+      state.productName = productName;
     },
   },
 });
