@@ -11,7 +11,7 @@
       >
         <li>
           <button
-            @click.prevent="addCart()"
+            @click.prevent="addCart(product)"
             class="flex items-center justify-center hover:bg-white rounded-[50%] w-[30px] h-[30px] cursor-pointer"
           >
           <svg
@@ -43,7 +43,7 @@
             type="button"
           >
           <svg
-              :class="[isActive ? 'fill-red' : 'fill-[#535399]']"
+              :class="[product.isFavorite ? 'fill-red' : 'fill-[#535399]']"
               width="15"
               height="15"
               viewBox="0 0 21 21"
@@ -78,7 +78,7 @@ import { defineProps, computed, ref } from "vue";
 const props = defineProps(["product"]);
 const store = useStore();
 const cart = computed(() => store.state.cart);
-const isActive = ref(false);
+const wishlist = computed(() => store.state.wishlist);
 
 // Open Product Detail
 function openProduct() {
@@ -91,10 +91,20 @@ function addCart() {
     props.product.quantity = 1;
     cart.value.push(props.product);
   }
+
+  store.commit("TOGGLE_MODAL", true);
 }
 
-// Add to favorites
+// Add product to favorites
 function addFavorite() {
-  isActive.value = !isActive.value;
+  if(!wishlist.value.some((item) => item.code === props.product.code)) {
+    props.product.isFavorite = true;
+    wishlist.value.push(props.product);
+  } else if (props.product.isFavorite === true) {
+    props.product.isFavorite = false;
+    wishlist.value.splice(wishlist.value.findIndex(item => item === props.product), 1)
+  } else {
+    props.product.isFavorite = true;
+  }
 }
 </script>

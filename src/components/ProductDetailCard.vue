@@ -92,12 +92,12 @@
           <span class="text-[14px] text-navy-blue leading-[29px]">(22)</span>
         </div>
         <div class="flex items-center gap-x-[20px] mb-[10px]">
-          <span class="text-[16px] leading-[29px] text-navy-blue">${{
-            openedProduct.newPrice
-          }}</span>
-          <span class="text-[16px] leading-[29px] text-pink line-through">${{
-            openedProduct.oldPrice
-          }}</span>
+          <span class="text-[16px] leading-[29px] text-navy-blue"
+            >${{ openedProduct.newPrice }}</span
+          >
+          <span class="text-[16px] leading-[29px] text-pink line-through"
+            >${{ openedProduct.oldPrice }}</span
+          >
         </div>
         <span class="block font-semibold text-navy-blue text-[16px] mb-[12px]"
           >Color: <span>{{ openedProduct.color }}</span></span
@@ -117,7 +117,11 @@
           </button>
           <button
             @click="addFavorite()"
-            :class="[isActive ? 'bg-[red] hover:bg-[red] rounded-full' : '']"
+            :class="[
+              openedProduct.isFavorite
+                ? 'bg-[red] hover:bg-[red] rounded-full'
+                : '',
+            ]"
             class="flex items-center justify-center w-[31px] h-[31px]"
             type="button"
           >
@@ -196,19 +200,32 @@ import { computed, ref } from "vue";
 // Variables
 const store = useStore();
 const cart = computed(() => store.state.cart);
+const wishlist = computed(() => store.state.wishlist);
 const openedProduct = computed(() => store.state.openedProduct);
-const isActive = ref();
 
 // Add product to cart
 function addCart() {
-  if(!cart.value.some((item) => item.code === openedProduct.value.code)) {
+  if (!cart.value.some((item) => item.code === openedProduct.value.code)) {
     openedProduct.value.quantity = 1;
     cart.value.push(openedProduct.value);
   }
+
+  store.commit("TOGGLE_MODAL", true);
 }
 
-// Add to favorites
+// Add product to favorites
 function addFavorite() {
-  isActive.value = !isActive.value;
+  if (!wishlist.value.some((item) => item.code === openedProduct.value.code)) {
+    openedProduct.value.isFavorite = true;
+    wishlist.value.push(openedProduct.value);
+  } else if (openedProduct.value.isFavorite === true) {
+    openedProduct.value.isFavorite = false;
+    wishlist.value.splice(
+      wishlist.value.findIndex((item) => item === openedProduct.value),
+      1
+    );
+  } else {
+    openedProduct.value.isFavorite = true;
+  }
 }
 </script>

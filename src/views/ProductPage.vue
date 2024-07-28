@@ -33,5 +33,5 @@
 </template>
 
 <script setup>
-import MainProducts from '../components/MainProducts.vue';
+import MainProducts from "../components/MainProducts.vue";
 </script>

@@ -14,6 +14,7 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 3,
+        isFavorite: false,
       },
       {
         title: "Iphone XS Max",
@@ -26,6 +27,7 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 5,
+        isFavorite: false,
       },
       {
         title: "Apple Watch",
@@ -38,6 +40,7 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 4,
+        isFavorite: false,
       },
       {
         title: "Macbook",
@@ -50,6 +53,7 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 4,
+        isFavorite: false,
       },
       {
         title: "Iphone Case",
@@ -62,6 +66,7 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 2,
+        isFavorite: false,
       },
     ],
     articles: [
@@ -96,6 +101,7 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 5,
+        isFavorite: false,
         quantity: 1,
       },
       {
@@ -109,9 +115,11 @@ const store = createStore({
         img: "/images/product-img.png",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est adipiscing in phasellus non in justo.",
         score: 5,
+        isFavorite: false,
         quantity: 4,
       },
     ],
+    wishlist: [],
     categories: [
       "Hobbies",
       "Women",
@@ -127,6 +135,7 @@ const store = createStore({
     openedProduct: "",
     productView: 'grid',
     productName: '',
+    isVisibleModal: false,
   },
   mutations: {
     OPEN_ARTICLE(state, openedArticle) {
@@ -140,6 +149,9 @@ const store = createStore({
     },
     TOGGLE_PRODUCT_VIEW(state, productView) {
       state.productView = productView;
+    },
+    TOGGLE_MODAL(state, isVisibleModal) {
+      state.isVisibleModal = isVisibleModal;
     },
     ADD_PRODUCT_NAME(state, productName) {
       state.productName = productName;

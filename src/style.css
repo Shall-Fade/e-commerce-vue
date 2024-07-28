@@ -1,5 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .modal-enter-active,
+  .modal-leave-active {
+    transition: all 0.25s ease-out;
+  }
+
+  .modal-enter-from {
+    opacity: 1;
+    transform: translateY(-100px);
+    transition: all 0.25s ease-out;
+  }
+
+  .modal-leave-to {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.25s ease-out;
+  }
+
+  /* Main Slider */
+  .swiper-wrapper-main .swiper-wrapper {
+    padding-bottom: 0;
+  }
+
+  .swiper-wrapper-main .swiper-pagination {
+    bottom: 50px !important;
+  }
+
+  .swiper-wrapper-main .swiper-pagination .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: transparent !important;
+    border: 1px solid #fb2e86 !important;
+    border-radius: 50% !important;
+  }
+
+  .swiper-wrapper-main .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #fb2e86 !important;
+  }
+
+  /* Products Slider */
+  .swiper-wrapper-products .swiper-wrapper {
+    padding-bottom: 50px;
+  }
+  .swiper-wrapper-products .swiper-pagination {
+    bottom: 0 !important;
+  }
+
+  .swiper-wrapper-products .swiper-pagination .swiper-pagination-bullet {
+    width: 16px !important;
+    height: 4px !important;
+    background-color: #febad7 !important;
+    border-radius: 10px !important;
+  }
+
+  .swiper-wrapper-products .swiper-pagination .swiper-pagination-bullet-active {
+    width: 24px !important;
+    background-color: #fb2e86 !important;
+  }
+}

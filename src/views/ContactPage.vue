@@ -18,7 +18,7 @@
             class="flex items-center gap-x-[10px] after:w-[5px] after:h-[5px] after:rounded-full after:bg-pink last:after:hidden"
           >
             <RouterLink
-              to="/blog"
+              to="/contact"
               class="text-[16px] font-lato text-black hover:text-pink duration-150"
             >
               Contact Us

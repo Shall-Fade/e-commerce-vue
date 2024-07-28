@@ -6,7 +6,7 @@
     >
       <div class="flex items-center gap-x-[80px]">
         <span class="text-navy-blue text-[34px] font-bold">
-          <RouterLink to="/">Hekto</RouterLink>
+          <RouterLink to="/" activeClass="text-navy-blue">Hekto</RouterLink>
         </span>
         <nav>
           <ul class="flex items-center gap-x-[35px] font-lato">
@@ -14,8 +14,9 @@
               <RouterLink
                 class="text-[16px] text-navy-blue leading-[20px] hover:text-pink duration-150"
                 to="/"
-                >Home</RouterLink
               >
+                Home
+              </RouterLink>
             </li>
             <li>
               <RouterLink

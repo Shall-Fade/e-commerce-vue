@@ -11,6 +11,20 @@
       <!-- <BlogPage /> -->
       <!-- <ArticlePage /> -->
       <!-- <AboutPage /> -->
+      <!-- Modal -->
+      <base-modal>
+        <template v-slot:title>
+          The product has been added to the cart
+        </template>
+        <template v-slot:link>
+          <RouterLink
+            class="mr-auto text-[15px] font-bold duration-150 hover:text-pink"
+            to="/cart"
+          >
+            Go To Cart
+          </RouterLink>
+        </template>
+      </base-modal>
     </main>
     <TheFooter />
   </div>

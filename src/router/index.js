@@ -11,8 +11,10 @@ import ProductDetailPage from "../views/ProductDetailPage.vue";
 import OrderCompletedPage from "../views/OrderCompletedPage.vue";
 import LoginPage from "../views/LoginPage.vue";
 import RegistrationPage from "../views/RegistrationPage.vue";
+import WishlistPage from "../views/WishlistPage.vue";
 
 const router = createRouter({
+  linkActiveClass: 'text-pink',
   history: createWebHistory(),
   routes: [
     {
@@ -58,6 +60,10 @@ const router = createRouter({
     {
       path: "/registration",
       component: RegistrationPage,
+    },
+    {
+      path: "/wishlist",
+      component: WishlistPage,
     },
   ],
   scrollBehavior(to, from, savedPosition) {

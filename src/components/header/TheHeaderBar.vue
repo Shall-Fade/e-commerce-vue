@@ -63,7 +63,7 @@
           </RouterLink>
         </li>
         <li class="flex items-center">
-          <RouterLink to="" class="flex items-center gap-x-[5px] text-white hover:text-pantone-purple duration-150">
+          <RouterLink to="/wishlist" class="flex items-center gap-x-[5px] text-white hover:text-pantone-purple duration-150">
             <span class="text-[16px] font-semibold">Wishlist</span>
             <span class="w-[16px] h-[16px]">
                 <img src="../../../public/images/heart-icon.svg" alt="Heart Icon">

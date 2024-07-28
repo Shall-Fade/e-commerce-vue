@@ -10,6 +10,7 @@ import BaseProductCardList from "./components/base/BaseProductCardList.vue";
 import BaseCartCard from "./components/base/BaseCartCard.vue";
 import BaseArticle from "./components/base/BaseArticle.vue";
 import BasePagination from "./components/base/BasePagination.vue";
+import BaseModal from "./components/base/BaseModal.vue";
 
 const app = createApp(App);
 
@@ -23,5 +24,6 @@ app.component("BaseProductCardList", BaseProductCardList);
 app.component("BaseCartCard", BaseCartCard);
 app.component("BaseArticle", BaseArticle);
 app.component("BasePagination", BasePagination);
+app.component("BaseModal", BaseModal);
 
 app.mount("#app");

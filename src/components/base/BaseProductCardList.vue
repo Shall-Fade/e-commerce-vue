@@ -56,7 +56,7 @@
           <button @click.prevent="addFavorite()" type="button">
             <svg
               class="hover:fill-red duration-150"
-              :class="[isActive ? ' fill-red' : 'fill-[#535399]']"
+              :class="[product.isFavorite ? ' fill-red' : 'fill-[#535399]']"
               width="21"
               height="21"
               viewBox="0 0 21 21"
@@ -82,7 +82,7 @@ import { defineProps, computed, ref } from "vue";
 const props = defineProps(["product"]);
 const store = useStore();
 const cart = computed(() => store.state.cart);
-const isActive = ref(false);
+const wishlist = computed(() => store.state.wishlist);
 
 // Open Product Detail
 function openProduct() {
@@ -95,10 +95,20 @@ function addCart() {
     props.product.quantity = 1;
     cart.value.push(props.product);
   }
+
+  store.commit("TOGGLE_MODAL", true);
 }
 
-// Add to favorites
+// Add product to favorites
 function addFavorite() {
-  isActive.value = !isActive.value;
+  if(!wishlist.value.some((item) => item.code === props.product.code)) {
+    props.product.isFavorite = true;
+    wishlist.value.push(props.product);
+  } else if (props.product.isFavorite === true) {
+    props.product.isFavorite = false;
+    wishlist.value.splice(wishlist.value.findIndex(item => item === props.product), 1)
+  } else {
+    props.product.isFavorite = true;
+  }
 }
 </script>
